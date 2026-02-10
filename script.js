@@ -11,7 +11,7 @@ function createDiv(i) {
 
 createDiv();
 
-container.addEventListener("mouseover", changeColor);
+container.addEventListener("click", changeColor);
 
 function changeColor(e) {
     if (e.target.matches("div")) {
@@ -21,7 +21,28 @@ function changeColor(e) {
 }
 
 
+
 /*
+document.querySelector("button").onclick = askGrid
+
+function askGrid() {
+    var newGrid = prompt("new grid?");
+    const newNumber = newGrid * newGrid;
+    for (i = 0; i < newNumber; i++) {
+    const divsNew = document.createElement("div");
+    divsNew.classList.add("square");
+    divsNew.id = "color";
+    container.appendChild(divsNew);
+  }
+};
+
+
+
+
+
+
+var newGrid = askGrid();
+
 document.querySelector("div").addEventListener("click", changeColor);
 
 function changeColor(i) {
@@ -32,8 +53,7 @@ function changeColor(i) {
 };
 
 
-
-document.querySelectorAll(".square").forEach(el => el.addEventListener("mousover", changeColor));
+document.querySelectorAll(".square").forEach(el => el.addEventListener("mouseover", changeColor));
 
 
 function selectAll() {
