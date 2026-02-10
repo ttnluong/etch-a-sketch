@@ -1,10 +1,12 @@
 const container = document.querySelector("#container");
 
 function createDiv(i) {
-    for (i = 0; i < 256; i++) {
+    const baseGrid = 16;
+    for (i = 0; i < baseGrid*baseGrid ; i++) {
     const divs = document.createElement("div");
     divs.classList.add("square");
     divs.id = "color";
+    divs.style.width = (100/baseGrid)+"%";
     container.appendChild(divs);
   }
 }
