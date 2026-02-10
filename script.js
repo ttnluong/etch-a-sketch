@@ -18,9 +18,18 @@ container.addEventListener("mouseover", changeColor);
 function changeColor(e) {
     if (e.target.matches("div")) {
         const el = e.target;
-        el.style.backgroundColor = "blue";
+        el.style.backgroundColor = rgb;
     }
 }
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+const r = getRandomInt(0, 255);
+const g = getRandomInt(0, 255);
+const b = getRandomInt(0, 255);
+const rgb = `rgb(${r},${g},${b})`;
 
 document.querySelector("button").onclick = askGrid;
 
