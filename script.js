@@ -13,7 +13,7 @@ function createDiv(i) {
 
 createDiv();
 
-container.addEventListener("click", changeColor);
+container.addEventListener("mouseover", changeColor);
 
 function changeColor(e) {
     if (e.target.matches("div")) {
@@ -22,25 +22,28 @@ function changeColor(e) {
     }
 }
 
+document.querySelector("button").onclick = askGrid;
 
-
-/*
-document.querySelector("button").onclick = askGrid
-
-function askGrid() {
+function askGrid(i) {
     var newGrid = prompt("new grid?");
-    const newNumber = newGrid * newGrid;
-    for (i = 0; i < newNumber; i++) {
+    if (newGrid > 100) {
+        alert("under 100");
+        return;
+    }
+    while (container.firstChild) {
+        container.firstChild.remove();
+    }
+    for (i = 0; i < newGrid*newGrid; i++) {
     const divsNew = document.createElement("div");
     divsNew.classList.add("square");
-    divsNew.id = "color";
+    divsNew.style.width = (100/newGrid)+"%";
     container.appendChild(divsNew);
   }
 };
 
 
 
-
+/*
 
 
 var newGrid = askGrid();
