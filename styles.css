@@ -15,13 +15,19 @@
     width: 640px;
     height: 640px;
     border: 1px solid #74bb2c;
+    overflow: hidden;
 }
 
 .square {
-    border: 1px solid #74bb2c;
+    border: .1px solid #f4ffea;
 }
 
-button {
+
+#newgrid {
     margin-top: 20px;
-    margin-bottom: 30px;
+}
+
+#reset {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

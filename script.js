@@ -7,31 +7,29 @@ function createDiv(i) {
     divs.classList.add("square");
     divs.id = "color";
     divs.style.width = (100/baseGrid)+"%";
+    divs.addEventListener("mouseover", () => {
+        divs.style.backgroundColor = randomColor();
+        divs.style.opacity = Number(divs.style.opacity) + 0.1;
+    });
     container.appendChild(divs);
   }
 }
 
 createDiv();
 
-container.addEventListener("mouseover", changeColor);
-
-function changeColor(e) {
-    if (e.target.matches("div")) {
-        const el = e.target;
-        el.style.backgroundColor = rgb;
-    }
-}
-
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+function randomColor() {
 const r = getRandomInt(0, 255);
 const g = getRandomInt(0, 255);
 const b = getRandomInt(0, 255);
 const rgb = `rgb(${r},${g},${b})`;
+return rgb;
+}
 
-document.querySelector("button").onclick = askGrid;
+document.querySelector("#newgrid").onclick = askGrid;
 
 function askGrid(i) {
     var newGrid = prompt("new grid?");
@@ -50,9 +48,18 @@ function askGrid(i) {
   }
 };
 
+document.querySelector("#reset").onclick = reset;
 
+function reset() {
+    document.querySelectorAll(".square").forEach(square => {
+        square.style.backgroundColor = "";
+        square.style.opacity = "";
+    });
+}
 
 /*
+
+divs.style.opacity = Number(divs.style.opacity) + 0.1;
 
 
 var newGrid = askGrid();
