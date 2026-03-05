@@ -44,6 +44,10 @@ function askGrid(i) {
     const divsNew = document.createElement("div");
     divsNew.classList.add("square");
     divsNew.style.width = (100/newGrid)+"%";
+    divsNew.addEventListener("mouseover", () => {
+        divsNew.style.backgroundColor = randomColor();
+        divsNew.style.opacity = Number(divsNew.style.opacity) + 0.1;
+    });
     container.appendChild(divsNew);
   }
 };
