@@ -32,9 +32,9 @@ return rgb;
 document.querySelector("#newgrid").onclick = askGrid;
 
 function askGrid(i) {
-    var newGrid = prompt("new grid?");
+    var newGrid = prompt("select a number between 1-100");
     if (newGrid > 100) {
-        alert("under 100");
+        alert("under 100 please");
         return;
     }
     while (container.firstChild) {
@@ -56,61 +56,3 @@ function reset() {
         square.style.opacity = "";
     });
 }
-
-/*
-
-divs.style.opacity = Number(divs.style.opacity) + 0.1;
-
-
-var newGrid = askGrid();
-
-document.querySelector("div").addEventListener("click", changeColor);
-
-function changeColor(i) {
-    const div = document.querySelectorAll(".square");
-    for (i = 0; i < div.length; i++) {
-    div(i).style.backgroundColor = "blue";
-}
-};
-
-
-document.querySelectorAll(".square").forEach(el => el.addEventListener("mouseover", changeColor));
-
-
-function selectAll() {
-    const div = document.querySelectorAll(".square");
-    for (i = 0; i < div.length; i++) {
-        div(i).addEventListener("mouseover", changeColor);
-    }
-};
-
-function changeColor() {
-    div.style.backgroundColor = "blue";
-};
-
-selectAll();
-
-
-const div = document.getElementById("color");
-divs.addEventListener("click", changeColor);
-
-function changeColor() {
-    const div = document.getElementById("color")
-    div.classList.replace("square", "squareHover")
-}
-
-div.classList.replace("square", "squareHover");
-
-
-function changeColor() {
-    document.getElementById("color").style.backgroundColor = "lightblue";
-}
-
-const div = document.querySelector(".square");
-div.addEventListener("click", changeColor); 
-
-divs.id = "color";
-
-    divs.setAttribute("id", "color");
-
-*/
