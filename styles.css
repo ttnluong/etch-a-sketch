@@ -25,9 +25,19 @@
 
 #newgrid {
     margin-top: 20px;
+    border-radius: 10px;
+    border-width: 1px;
+    padding: 6px 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT';
+    font-size: 16px;
 }
 
 #reset {
     margin-top: 20px;
     margin-bottom: 20px;
+    border-radius: 10px;
+    border-width: 1px;
+    padding: 6px 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT';
+    font-size: 16px;
 }
