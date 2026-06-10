@@ -4,7 +4,7 @@ A browser-based Etch-a-Sketch drawing tool built as part of The Odin Project Fou
 
 ## Live Demo
 
-[View Demo](https://ttnluong.github.io/odin-etch-a-sketch/)
+[View Demo](https://ttnluong.github.io/etch-a-sketch/)
 
 ## Features
 - Interactive grid-based drawing canvas
